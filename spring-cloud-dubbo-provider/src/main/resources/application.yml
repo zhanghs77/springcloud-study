@@ -1,0 +1,27 @@
+spring:
+  application:
+    name: study-test
+  cloud:
+    nacos:
+      discovery:
+        server-addr: localhost:8848
+        enabled: true
+        register-enabled: true
+  main:
+    allow-bean-definition-overriding: true
+server:
+  port: 8001
+
+dubbo:
+  scan:
+    base-packages: com.zhanghongshan.study.springcloud.dubbo.provider.impl
+  protocol:
+    port: 20881
+    name: dubbo
+  application:
+    qos-enable: true
+  cloud:
+    subscribed-services: ""
+  registries:
+    new:
+      address: spring-cloud://127.0.0.1:8848

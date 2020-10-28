@@ -1,0 +1,23 @@
+spring:
+  application:
+    name: study-test01
+  cloud:
+    nacos:
+      discovery:
+        server-addr: localhost:8848
+        enabled: true
+        register-enabled: true
+        namespace: public
+  main:
+    allow-bean-definition-overriding: true
+server:
+  port: 8002
+dubbo:
+  cloud:
+    subscribed-services: study-test
+  registries:
+    new:
+      address: spring-cloud://127.0.0.1:8848
+  application:
+    qos-enable: true
+    qos-port: 20810

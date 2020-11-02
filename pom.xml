@@ -11,6 +11,7 @@
         <module>spring-cloud-dubbo-consumer</module>
         <module>spring-cloud-dubbo-api</module>
         <module>mybatis-plus-generator</module>
+        <module>gateway</module>
     </modules>
     <name>springcloud</name>
     <description>study spring cloud</description>

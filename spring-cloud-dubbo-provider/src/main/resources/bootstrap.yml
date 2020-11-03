@@ -7,3 +7,6 @@ spring:
 mybatis-plus:
   mapper-locations: classpath*:/mapper/**/*.xml
   type-aliases-package: com.zhanghongshan.study.springcloud.dubbo.provider.module
+feign:
+  httpclient:
+    connection-timeout: 2000
